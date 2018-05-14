@@ -19,7 +19,7 @@ public class Mediamark {
             // 3. Creo el Statement
             Statement s=c.createStatement();
             //4.Trabajo con las consultas
-            ResultSet rs=s.executeQuery("Select * From Productos");
+            ResultSet rs=s.executeQuery("Select Id,Nombre,Precio From Productos"); //La unica diferencia es que en este punto puse un asterisco (*) en vez de atributos 
             while(rs.next()==true){
                 System.out.println(rs.getInt("Id")+" "+rs.getString("Nombre")+" "+rs.getDouble("Precio"));
             }
